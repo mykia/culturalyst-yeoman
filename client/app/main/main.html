@@ -73,10 +73,10 @@
       </div>
     </section>
     <!-- Album of Featured Artists with Hover Effects -->
-    <div class="container">
+<!--     <div class="container">
       <div class="row">
         <div class="album text-muted">
-          <div class="card" ng-repeat="artist in featured">
+          <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" ng-repeat="artist in featured">
             <div class="hover-div col-lg-3 col-md-4 col-sm-6 col-xs-12">
               <h1>{{artist.name}}</h1>
               <p>{{artist.medium}}</p>
@@ -90,8 +90,41 @@
                 </div>
               </div>
             </div>
+          </div>
         </div>
       </div>
+    </div> -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-6" ng-repeat="artist in featured">
+          <a href="http://www.nba.com">
+              <img class="img-responsive" src="assets/img/{{artist.img}}" alt="">
+            </div>
+          </a>        
+        </div>
+        </div>  
+
+        <!-- <div class="col-md-6 col-sm-6">        
+          <div class="hover ehover1">
+            <img class="img-responsive" src="assets/img/cover_photo_6.png" alt="">
+          </div>
+        </div>   
+
+        <div class="col-md-6 col-sm-6">        
+          <div class="hover ehover1">
+            <img class="img-responsive" src="assets/img/cover_photo_2.png" alt="">
+          </div>
+        </div>   -->
+  
+
+      </div>
+    </div>
+
+    
+
+
+
 
 <!--     <div class="album text-muted">
       <div class="container">
@@ -144,8 +177,8 @@
 
       </div>
     </div> -->
-  <div class="container">
-  
+  <!-- <div class="container">
+
     <div class="row">
       
       <div class="album text-muted"> 
@@ -160,7 +193,7 @@
 
   </div>
 
-</div>
+</div> -->
 
 <footer></footer>
 

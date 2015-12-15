@@ -42,12 +42,17 @@
   height: 740px;
 }
 
+.col-lg-3, .col-md-4, .col-sm-6, .col-xs-12 {
+  padding: 0px;
+}
+
 .card {
   float: left;
   width: 33.333%;
   padding: .75rem;
   margin-bottom: 2rem;
   border: 0;
+  flex-direction: column;
 }
 
 .card > img {
@@ -105,6 +110,7 @@ footer p {
   line-height: 1.6em;
   font-weight: normal;
 }
+
 .hover-div {
   width: 100% !important;
 }
