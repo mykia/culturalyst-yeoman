@@ -14,7 +14,7 @@ angular.module('culturalystApp')
       	templateUrl:'app/main/main.mediums.html'
       })
       .state('.mymediums',{
-        parent:'main'
+        parent:'main',
       	templateUrl:'app/main/main.mymediums.html'
       })
   });

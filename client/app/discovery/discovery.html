@@ -1,22 +1,12 @@
 <navbar></navbar>
 
 <div ng-controller="DiscoveryCtrl">
-<<<<<<< 1e663c4a3de832ebbeac831cf875950c7a291089
-
-	<section class="jumbotron text-xs-center">
-=======
 		<section class="jumbotron text-xs-center">
 
 
->>>>>>> feat/artistCard: Working artist cards
       <div class="container">
         <h1 align="center" class="jumbotron-heading">Featured Artists in New Orleans</h1>
         <p class="lead text-muted" align="center">BEGIN TO DISCOVER THE CULTURE AROUND YOU. </p>
-<<<<<<< 1e663c4a3de832ebbeac831cf875950c7a291089
-        <select ng-model="medium" ng-options="medium as medium.name for medium in mediaList" ng-change="loadSubMediums(medium); getArtists()" ng-selected="medium"></select>
-        <select ng-model="selectedSubmedium" ng-options="submedium for submedium in submedia" ng-change="getArtists()"></select>
-
-=======
         <select align="center" ng-model="medium" ng-options="medium as medium.name for medium in mediaList" ng-change="loadSubMediums(medium); getArtists()" ng-selected="medium"></select>
         <select align="center" ng-model="selectedSubmedium" ng-options="submedium for submedium in submedia" ng-change="getArtists()"></select>
        
@@ -55,11 +45,11 @@
 
 
 <div class ="container">
-  <div ng-controller="SearcherCtrl">
+
     <div class="row">
         <!-- for $scope to work we would need a controller -->
         <div class="album text-muted"> 
-          <div class="card" ng-repeat="artist in featured | filter:searchText | filter:{$:medium.name}">
+          <div class="card" ng-repeat="artist in artists | filter:searchText | filter:{$:medium.name}">
             <div>
                 <img class="profilePic" ng-src="assets/img/{{artist.profile}}"/>
                 <div class="profileName">
@@ -72,7 +62,6 @@
         </div>
 
     </div>
-  </div>
 
 </div>
 

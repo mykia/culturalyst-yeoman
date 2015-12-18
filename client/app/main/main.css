@@ -58,16 +58,7 @@ body {
 *{margin: 0;padding: 0;}
 
 
-#container1
-{
-height: 510px;
-width: 100%;
-background-color: white;
-overflow: hidden;
-position: relative;
-/*//#overflow-x: scroll;*/
-overflow: scroll;
-}
+
 
 .profile {
   padding: 0;
