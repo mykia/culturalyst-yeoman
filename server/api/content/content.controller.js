@@ -80,7 +80,11 @@ exports.show = function(req, res) {
 
 // Creates a new Content in the DB
 exports.create = function(req, res) {
-  Content.create(req.body)
+  var id = req.params.id;
+  Content.create({
+    name: req.body.name,
+    artistId: id
+  })
     .then(responseWithResult(res, 201))
     .catch(handleError(res));
 };
