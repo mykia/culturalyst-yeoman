@@ -102,7 +102,12 @@ exports.showResults = function(req, res, next) {
         console.log('No users');
         return res.status(404).end();
       }
-      res.json(users);
+      var array = [];
+      users.forEach(function(img){
+        array.push(img);
+      })
+      res.json(array);
+
     })
     .catch(function(err) {
       return next(err);
@@ -167,6 +172,25 @@ exports.updateUserInfo = function(req, res, next) {
         user.name = name;
         user.email = email;
         user.location = location;
+        return user.save()
+          .then(function() {
+            res.status(204).end();
+          })
+          .catch(validationError(res));
+    });
+};
+
+exports.updateArtistContent = function(req, res, next) {
+  console.log('this fired');
+  var userId = req.user._id;
+  var url = req.body.url;
+  User.find({
+      where: {
+        _id: userId
+      }
+    })
+    .then(function(user) {
+        user.picUrl = url;
         return user.save()
           .then(function() {
             res.status(204).end();

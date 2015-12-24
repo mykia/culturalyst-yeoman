@@ -11,6 +11,7 @@ module.exports = function(sequelize, DataTypes) {
     user_id: DataTypes.INTEGER,
     name: DataTypes.STRING,
     info: DataTypes.STRING,
+    url: DataTypes.STRING,
     active: DataTypes.BOOLEAN
   });
 };

@@ -12,6 +12,13 @@ angular.module('culturalystApp')
       console.log(res);
       $scope.artist = res.data;
     })
+
+    $http.get('/api/content/' + artistId).then(function(res) {
+      console.log(res);
+      $scope.content = res.data;
+    })
+
+    console.log("this fired");
     
   });
 
@@ -24,4 +31,4 @@ angular.module('culturalystApp')
     // })
 
 
-  });
+
