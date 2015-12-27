@@ -199,6 +199,25 @@ exports.updateArtistContent = function(req, res, next) {
     });
 };
 
+exports.updateArtistCover = function(req, res, next) {
+  console.log('this fired');
+  var userId = req.user._id;
+  var url = req.body.url;
+  User.find({
+      where: {
+        _id: userId
+      }
+    })
+    .then(function(user) {
+        user.img = url;
+        return user.save()
+          .then(function() {
+            res.status(204).end();
+          })
+          .catch(validationError(res));
+    });
+};
+
 exports.updateArtistInfo = function(req, res, next) {
   var userId = req.user._id;
   var bio = req.body.bio;

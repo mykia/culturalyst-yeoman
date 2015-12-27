@@ -16,7 +16,7 @@
 
 
 <div class="container">
-  <div class="wrapper">
+  <div class="wrapperBig">
     <div id="uploader" 
         ng-init='getArtistID()'
         ngf-drop="uploadFiles($files)"
@@ -76,7 +76,7 @@
         <div class="card-block">
            <!--  <span>{{item.url}}</span> -->
           <button align="center" href="#" ng-click="updateImg(profile, item.url)" class="btn btn-primary">Make Profile Picture</button>
-          <a align="center" href="#" class="btn btn-primary">Delete</a>
+          <button align="center" ng-click="updateCover(profile, item.url)" href="#" class="btn btn-primary">Make Cover</a>
         </div>
         </div>
       </div>

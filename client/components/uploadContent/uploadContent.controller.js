@@ -53,14 +53,19 @@ angular.module('culturalystApp.uploadArtistContent', ['ngFileUpload'])
     // });
     
     $scope.saveContent = function(url){
-        $http.post('/api/content/' + $scope.artistId, {url: url}).then(function(response){
+        $http.post('/api/content/' + $scope.artistId, {url: url, type:'profile'}).then(function(response){
             $scope.gallery.push(response.data);
         })
     };
 
     $scope.updateImg = function(imgType, url){
-        console.log(url);
-        $http.put('/api/users/' + $scope.artistId +'/updateArtistContent', {url: url, imgType:imgType}).then(function(response){
+        $http.put('/api/users/' + $scope.artistId +'/updateArtistContent', {url: url}).then(function(response){
+            console.log(response.status);
+        })
+    };
+
+    $scope.updateCover = function(imgType, url){
+        $http.put('/api/users/' + $scope.artistId +'/updateArtistCover', {url: url}).then(function(response){
             console.log(response.status);
         })
     };

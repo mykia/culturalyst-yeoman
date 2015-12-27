@@ -83,10 +83,13 @@ exports.show = function(req, res) {
 // Creates a new Content in the DB
 exports.create = function(req, res) {
   var id = req.params.id;
+  console.log(req.body.info);
   Content.create({
     name: req.body.name,
     user_id: id,
-    url:req.body.url
+    url:req.body.url,
+    info: req.body.info,
+    type: req.body.type
   })
     .then(responseWithResult(res, 201))
     .catch(handleError(res));
@@ -125,7 +128,8 @@ exports.showResults = function(req, res, next) {
 
   Content.findAll({
       where: {
-        user_id: artist_id
+        user_id: artist_id,
+        type: "post"
       }
     })
     .then(function(content) {
