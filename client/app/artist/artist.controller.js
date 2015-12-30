@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('culturalystApp')
-  .controller('ArtistCtrl', ['$scope', '$rootScope','$location', 'Upload', '$http', 'Auth',
-    function($scope, $rootScope, $location, $upload, $http, Auth) {
+  .controller('ArtistCtrl', ['$scope', '$rootScope','$location', 'Upload', '$http', 'Auth', '$sce',
+    function($scope, $rootScope, $location, $upload, $http, Auth, $sce) {
 
     $scope.artistId = $location.path().split('/').pop();
     $scope.posts = [];
@@ -14,6 +14,8 @@ angular.module('culturalystApp')
     console.info($scope.user);
     console.log($scope.artistId);
     $scope.delta;
+    $scope.artist;
+    $scope.videoID;
 
     $scope.checkIfArtist = function(){
       if ($scope.user === $scope.artistId){
@@ -27,6 +29,7 @@ angular.module('culturalystApp')
     $http.get('/api/users/' + $scope.artistId).then(function(res) {
       console.log(res);
       $scope.artist = res.data;
+      console.log($scope.artist);
       $scope.getRewards();
     });
 
@@ -35,6 +38,8 @@ angular.module('culturalystApp')
       console.log(res);
       $scope.content = res.data;
     });
+
+    // $scope.videoID = $sce.trustAsResourceUrl($scope.artist.vid_bio);
 
     // $scope.init = function(){
     //   window.addEventListener('scroll', function(e){
@@ -52,6 +57,9 @@ angular.module('culturalystApp')
     //   });
     // }
 
+    $scope.video = {
+      templateId: $sce.trustAsResourceUrl({{artist.vid_bio}})
+    };
 
      $scope.saveContent = function(post){
       console.log($scope.postId);

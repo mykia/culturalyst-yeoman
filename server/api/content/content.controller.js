@@ -151,7 +151,7 @@ exports.showUploadResults = function(req, res, next) {
   Content.findAll({
       where: {
         user_id: artist_id,
-        type: "cover"
+        type:"cover"
       }
     })
     .then(function(content) {

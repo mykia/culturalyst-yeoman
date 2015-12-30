@@ -81,6 +81,7 @@
 
 .modal-dialog {
   margin-top: 0px;
+  width: 530px !important;
 }
 
 .modal-content {
@@ -123,3 +124,15 @@ a{
   min-height: 35px;
 }
 
+.catalyzeBtn{
+  background-color:#9B30FF;
+  color:white;
+  font-size: 20px;
+  width:200px;
+  height:55px;
+}
+.profilePicSm {
+  height:40px !important;
+  width: 40px !important;
+  border-radius: 50% !important;
+}

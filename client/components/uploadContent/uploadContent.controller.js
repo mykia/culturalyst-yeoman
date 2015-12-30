@@ -82,7 +82,7 @@ angular.module('culturalystApp.uploadArtistContent', ['ngFileUpload'])
 
 
 
-    $scope.getArtistContent = function(){
+    $scope.getArtistCovers = function(){
       console.log('this fired');
       console.log($scope.artistId);
       $http.get('/api/content/' + $scope.artistId +'/getAllContent').then(function(response){
@@ -102,7 +102,7 @@ angular.module('culturalystApp.uploadArtistContent', ['ngFileUpload'])
         $scope.artistId = response.data._id
         console.log($scope.me);
         console.log($scope.artistId);
-        $scope.getArtistContent();
+        $scope.getArtistCovers();
       })
     };
 

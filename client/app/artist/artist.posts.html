@@ -13,6 +13,30 @@
             Thank God for Culturalyst!
           </p>
         </div> -->
+        <div class="col-lg-6">
+            <div class="modal-dialog" ng-repeat="post in posts | limitTo: 10 | orderBy: created">
+<!--               <div class="modal-content">
+ -->                    <div class="card">
+                      <!-- <img class="card-img-top" src="{{post.url}}"/> -->
+                      <div class='col-sm-4' style="width: 25%">
+                        <img class="profilePicSm" src="{{artist.picUrl}}"/>
+                      </div>
+                      <div class='col-sm-4'style="width: 75%">
+                        <!-- <img class="profilePicSm" src="{{artist.picUrl}}"/> -->
+                        <p>{{artist.name}}: {{post.info}}</p>
+                      </div>
+                      
+
+                    </div>
+<!--                     <div class="col-md-3">
+                      <span>{{artist.name}}</span>
+                      <span>{{post.created}}</span>
+                      <p>{{post.info}}</p>
+                    </div> -->
+
+<!--               </div>
+ -->            </div>
+        </div>
         <div class="col-lg-6" style="visibility: {{delta}}">
           <div class="modal-dialog col-md-3">
           <div class="modal-content">
@@ -43,24 +67,7 @@
           </div>
         </div>
 
-        <div class="col-lg-6">
-            <div class="modal-dialog" ng-repeat="post in posts | limitTo: 10 | orderBy: created">
-<!--               <div class="modal-content">
- -->                    <div class="card">
-                      <!-- <img class="card-img-top" src="{{post.url}}"/> -->
-                      <p>
-                        {{artist.name}}: {{post.info}}: {{artistId}}
-                      </p>
-                    </div>
-<!--                     <div class="col-md-3">
-                      <span>{{artist.name}}</span>
-                      <span>{{post.created}}</span>
-                      <p>{{post.info}}</p>
-                    </div> -->
 
-<!--               </div>
- -->            </div>
-        </div>
 
 
 

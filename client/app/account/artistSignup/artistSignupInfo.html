@@ -53,13 +53,14 @@
    <!--  Short Bio -->
      <div class="form-group" style="width: 80%; margin: 5% 10% 0% 10%">
       <label for="short-bio">One Liner</label>
-      <textarea class="form-control" placeholder="Short description for the top of your artist profile" ng-model="short_bio">
+      <textarea class="form-control" placeholder="Short description for the top of your artist profile" ng-model="short_bio" value="{{currentUser.short_bio}}"> 
       </textarea>
     </div>
 <!--     Youtube Link -->
     <div class="form-group" style="width: 80%; margin: 5% 10% 0 10%">
       <label for="youtube">Introduction Video</label>
-      <input type="link" class="form-control" placeholder="YouTube Link" ng-model="vid_bio">
+      <input type="link" class="form-control" placeholder="YouTube Link" ng-model="vid_bio"  value="{{currentUser.vid_bio}}">
+     
     </div>
 
     <!--Bio-->
