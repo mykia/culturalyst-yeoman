@@ -19,6 +19,7 @@ angular.module('culturalystApp.uploadArtistContent', ['ngFileUpload'])
     var d = new Date();
     $scope.artistId;
     $scope.gallery = [];
+    $scope.coverId;
 
     $scope.title = "Image (" + d.getDate() + " - " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds() + ")";
     //$scope.$watch('files', function() {
@@ -43,6 +44,7 @@ angular.module('culturalystApp.uploadArtistContent', ['ngFileUpload'])
             data.context = {custom: {photo: $scope.title}};
             file.result = data;
             $rootScope.photos.push(data);
+            console.log(data);
             $scope.saveContent(data.secure_url);
           }).error(function (data, status, headers, config) {
             file.result = data;
@@ -54,7 +56,9 @@ angular.module('culturalystApp.uploadArtistContent', ['ngFileUpload'])
     
     $scope.saveContent = function(url){
         $http.post('/api/content/' + $scope.artistId, {url: url, type:'profile'}).then(function(response){
+            $scope.coverId = response.data._id;
             $scope.gallery.push(response.data);
+            console.log(response.data);
         })
     };
 
@@ -69,6 +73,14 @@ angular.module('culturalystApp.uploadArtistContent', ['ngFileUpload'])
             console.log(response.status);
         })
     };
+
+    $scope.saveCover = function(imgType){
+      $http.put('/api/content/' + $scope.coverId, {type:imgType}).then(function(response){
+          console.log(response);
+      })
+    };
+
+
 
     $scope.getArtistContent = function(){
       console.log('this fired');

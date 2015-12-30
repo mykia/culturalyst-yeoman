@@ -49,6 +49,8 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       default: 0
     },
+    short_bio:DataTypes.TEXT,
+    vid_bio:DataTypes.STRING,
     bio: DataTypes.TEXT,
     provider: DataTypes.STRING,
     salt: DataTypes.STRING,

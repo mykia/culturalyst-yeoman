@@ -13,5 +13,6 @@ router.patch('/:id', controller.update);
 router.delete('/:id', controller.destroy);
 router.post('/:id', controller.create);
 router.get('/:user_id/getContent', controller.showResults);
-// router.get('/:user_id/getAllContent', controller.showAllResults);
+router.get('/:user_id/getCovers', controller.showCovers);
+router.get('/:user_id/getAllContent', controller.showResults);
 module.exports = router;

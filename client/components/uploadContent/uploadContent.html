@@ -15,7 +15,7 @@
 
 
 
-<div class="container">
+<div class="container" align="center">
   <div class="wrapperBig">
     <div id="uploader" 
         ng-init='getArtistID()'
@@ -23,19 +23,15 @@
         ngf-drag-over-class="dragOverClass($event)"
         ng-model="files"
         ng-multiple="true">
-        <h3 class='upload-header'>Add Your Profile and Cover Photos</h3>
+        <h2 align="center">Artist Signup: Step 2</h2>
+        <h3 align="center">Upload Content</h3>
+        <p align="center">Upload a profile picture and a cover photo.</p>
         <form>
-            <div class="form_line">
-                <label path="title">Title:</label>
-                <div class="form_controls">
-                    <input type="text" class="form-control" placeholder="Title" ng-model="title" />
-                </div>
-            </div>
             <div class="form_line">
                 <label>Image:</label>
                 <div class="form_controls">
                     <div class="upload_button_holder">
-                        <div href="#" class="upload_button" ngf-select="uploadFiles($files)" multiple title="upload" resetOnClick="true" >Upload</div>
+                        <div href="#" class="upload_button" ngf-select="uploadFiles($files)" multiple title="upload" resetOnClick="true">Upload</div>
                     </div>
                     
                 </div>
@@ -76,7 +72,8 @@
         <div class="card-block">
            <!--  <span>{{item.url}}</span> -->
           <button align="center" href="#" ng-click="updateImg(profile, item.url)" class="btn btn-primary">Make Profile Picture</button>
-          <button align="center" ng-click="updateCover(profile, item.url)" href="#" class="btn btn-primary">Make Cover</a>
+        <!--   <button align="center" ng-click="updateCover(cover, item.url)" href="#" class="btn btn-primary">Make Cover</a> -->
+          <button align="center" ng-click="saveCover('cover')" href="#" class="btn btn-primary">Make Cover</a>
         </div>
         </div>
       </div>
