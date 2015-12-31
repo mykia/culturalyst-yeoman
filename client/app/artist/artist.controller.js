@@ -39,7 +39,6 @@ angular.module('culturalystApp')
       $scope.content = res.data;
     });
 
-    // $scope.videoID = $sce.trustAsResourceUrl($scope.artist.vid_bio);
 
     // $scope.init = function(){
     //   window.addEventListener('scroll', function(e){
@@ -57,9 +56,7 @@ angular.module('culturalystApp')
     //   });
     // }
 
-    $scope.video = {
-      templateId: $sce.trustAsResourceUrl({{artist.vid_bio}})
-    };
+ 
 
      $scope.saveContent = function(post){
       console.log($scope.postId);
