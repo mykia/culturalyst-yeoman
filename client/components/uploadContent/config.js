@@ -1,6 +1,2 @@
-console.log($.cloudinary);
-
-$.cloudinary.config().cloud_name = 'culturalyst';
-console.log($.cloudinary);
-
-$.cloudinary.config().upload_preset = 'lebxtfjo';
+// $.cloudinary.config().cloud_name = 'culturalyst';
+// $.cloudinary.config().upload_preset = 'lebxtfjo';

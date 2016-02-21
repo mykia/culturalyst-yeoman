@@ -4,6 +4,8 @@ angular.module('culturalystApp')
   .controller('UploadCtrl', ['$scope', '$rootScope', '$location', 'Upload', '$http',
     /* Uploading with Angular File Upload */
     function($scope, $rootScope, $location, $upload, $http) {
+      $scope.cloudinary_name ='culturalyst';
+      $scope.upload_preset = 'lebxtfjo';
       var d = new Date();
       $scope.artistId;
       $scope.gallery;
@@ -18,10 +20,11 @@ angular.module('culturalystApp')
         }
         angular.forEach(files, function(file) {
           if (file && !file.$error) {
+            console.log($.cloudinary);
             file.upload = $upload.upload({
-              url: "https://api.cloudinary.com/v1_1/" + $.cloudinary.config().cloud_name + "/upload",
+              url: "https://api.cloudinary.com/v1_1/" + $scope.cloudinary_name + "/upload",
               fields: {
-                upload_preset: $.cloudinary.config().upload_preset,
+                upload_preset: $scope.upload_preset,
                 tags: 'myphotoalbum',
                 context: 'photo=' + $scope.title
               },
