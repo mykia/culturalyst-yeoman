@@ -116,8 +116,8 @@ body {
   padding-top: 3rem;
   padding-bottom: 3rem;
   margin-bottom: 0;
-  background-color: #E0FFFF;
-  height:400px !important;
+/*  background-color: #E0FFFF;*/
+  height:700px !important;
 }
 
 #main-background{
@@ -386,6 +386,9 @@ background-color: rgba(33,154,200,0.75);
     .carousel-tagline {
         /*display: none;*/
     }
+}
+
+.media-buttons{
 }
 /*.hover-div {
   width: 100% !important;
