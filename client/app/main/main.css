@@ -11,7 +11,6 @@
   max-width: 70rem;
   margin-right: 3rem;
 }
-/*@import url(http://fonts.googleapis.com/css?family=Raleway:400,800|Roboto+Slab:300);*/
 
 body {
 
@@ -89,40 +88,29 @@ body {
   margin-top: -60px;
 }
 
-
-/*navbar-text {
-  margin-left: 15px;
-}
-
-.navbar.navbar-default.navbar-static-top.ng-scope {
-    margin-bottom: 0;
-}
-
-.about {
-  float: left;
-  max-width: 70rem;
-  margin-right: 3rem;
-}
-
-.social a {
-  font-weight: 500;
-  color: #eceeef;
-}
-.social a:hover {
-  color: #fff;
-}*/
-
 .jumbotron {
   padding-top: 3rem;
   padding-bottom: 3rem;
-  margin-bottom: 0;
-/*  background-color: #E0FFFF;*/
-  height:700px !important;
+  margin-bottom: 0px;
+  height:500px !important;
 }
 
-#main-background{
-  background-color: #fffcee;
+.jumbotron-explanation {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-bottom: 0;
+  height:400px !important;
+  background-color: white;
 }
+
+.jumbotron-curated {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-top: 10px;
+  height:400px !important;
+  background-color: green;
+}
+
 .big-header {
   height: 275px;
   margin-top: 30px;
@@ -148,41 +136,93 @@ body {
   border: none;
 }
 .btn-1 {
-  background-color: #ffd100;
+  background-color: black;
+  width: 150px;
+  height:150px;
+  font-size: 20px;
+  line-height: 135px;
+  text-align: center;
+  padding-bottom: 10px 16px;
+    border-radius: 75px;
+  margin: 30px;
+  margin-top: 40px
+
+
 }
-.btn-8{
+/*.btn-8{
   background-color: #e91e63;
 }
 .btn-11 {
   background-color: #7ce0d3;
-}
+}*/
 .btn-2{
-  background-color: #395eee;
+  background-color: black;
+  width: 150px;
+  height:150px;
+  font-size: 20px;
+  line-height: 135px;
+  text-align: center;
+  padding-bottom: 10px 16px;
+    border-radius: 75px;
+  margin: 30px;
+  margin-top: 40px
 }
-.btn-7{
+/*.btn-7{
   background-color: #ff8200;
 }
 .btn-9 {
   background-color: #1cc77e;
-}
+}*/
 .btn-3{
-  background-color: #69a1e1;
+  background-color: black;
+  width: 150px;
+  height:150px;
+  font-size: 20px;
+  line-height: 135px;
+  text-align: center;
+  padding-bottom: 10px 16px;
+    border-radius: 75px;
+  margin: 30px;
+  margin-top: 40px
 } 
-.btn-6{
+/*.btn-6{
   background-color: #410e83;
 } 
 .btn-12 {
   background-color: #51ccaa;
-}
+}*/
 .btn-4{
-  background-color: #811ba5;
+  background-color:black;
+  width: 150px;
+  height:150px;
+  font-size: 20px;
+  line-height: 135px;
+  text-align: center;
+  padding-bottom: 10px 16px;
+    border-radius: 75px;
+  margin: 30px;
+  margin-top: 40px
 }
-.btn-5{
+
+.btn-half{
+     height:100px;
+     width:200px;
+     border-radius: 0 0 200px 200px;
+     -moz-border-radius: 0 0 200px 200px;
+     -webkit-border-radius: 0 0 200px 200px;
+     background:blue;
+  margin: 30px;
+  font-size: 20px;
+  line-height: 65px;
+  margin-top: 40px
+}
+
+/*.btn-5{
   background-color: #f6a5c0;
 }
 .btn-10 {
   background-color: #f9423a;
-}
+}*/
 /* BUTTON BACKGROUND TRANSITIONS */
 .hvr-sweep-to-bottom:before, .hvr-shutter-in-vertical, .hvr-sweep-to-right:before, .hvr-radial-in, .hvr-rectangle-out:before, .hvr-shutter-out-horizontal:before, .hvr-bounce-in:before, .hvr-back-pulse:before  {
   background: #209 !important;
@@ -368,6 +408,13 @@ background-color: rgba(33,154,200,0.75);
     .tagline h2 {
       font-size: 2em;
     }
+  .jumbotron-explanation {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-bottom: 0;
+  height:700px !important;
+  background-color: white;
+}
 }
 
 @media screen and (max-width: 961px) {
@@ -388,7 +435,53 @@ background-color: rgba(33,154,200,0.75);
     }
 }
 
+@media screen and (max-width: 1025px) {
+    .carousel-tagline {
+        width: 300px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .jumbotron-explanation h1 {
+      font-size: 63px;
+    }
+}
+
 .media-buttons{
+}
+
+.round-button {
+  width:25%;
+}
+.round-button-circle {
+  width: 100%;
+  height:0;
+  padding-bottom: 100%;
+    border-radius: 50%;
+  border:10px solid #cfdcec;
+    overflow:hidden;
+    
+    background: #4679BD; 
+    box-shadow: 0 0 3px gray;
+}
+.round-button-circle:hover {
+  background:#30588e;
+}
+.round-button a {
+    display:block;
+  float:left;
+  width:100%;
+  padding-top:50%;
+    padding-bottom:50%;
+  line-height:1em;
+  margin-top:-0.5em;
+    
+  text-align:center;
+  color:#e2eaf3;
+    font-family:Verdana;
+    font-size:1.2em;
+    font-weight:bold;
+    text-decoration:none;
 }
 /*.hover-div {
   width: 100% !important;
